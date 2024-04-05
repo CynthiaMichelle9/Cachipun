@@ -2,6 +2,7 @@ let piedra = 0;
 let papel = 1;
 let tijera = 2;
 
+
 function obtenerJugadaIA() {
     return Math.floor(Math.random() * 3); // Devuelve un número aleatorio entre 0 y 2, que representa la jugada de la IA
 }
@@ -21,7 +22,9 @@ function quienGana(jugadaUsuario, jugadaIA) {
 }
 
 function cachipun() {
-    let jugadas = parseInt(prompt("Ingrese el número de veces que desea jugar contra la IA"));
+
+    alert("¡Bienvenido al ca-chi-pún!")
+    let jugadas = parseInt(prompt("Ingrese el número de veces que desea jugar contra la computadora "));
     
     for (let i = 0; i < jugadas; i++) {
         console.log('Ronda ' + (i + 1));
@@ -49,7 +52,6 @@ function cachipun() {
         let resultado = quienGana(opcionUsuarioNum, opcionIA);
         console.log(`Tú: ${opcionUsuario}`);
         console.log(`IA: ${obtenerNombreJugada(opcionIA)}`);
-        console.log(`Resultado: ${resultado}`);
 
         switch (resultado) {
             case "Usuario":
